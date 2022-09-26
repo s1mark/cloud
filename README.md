@@ -1,5 +1,14 @@
 # cloud
 
-Classroom related content
+## Classroom related content
 
-TEST
+### Notes
+
+#### Commands
+
+```
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+```
