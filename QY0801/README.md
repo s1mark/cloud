@@ -62,6 +62,30 @@ for_each = var.files
   content  = each.value
 ```
 
+#### GCloud IAM
+
+##### IAM module használata
+
+```
+resource "google_project_iam_binding" "project" {
+  project = "ekke-cloud"
+  role    = "roles/viewer"
+
+  members = [
+    "user:example@gmail.com",
+  ]
+}
+```
+
+##### Google provider.tf
+
+```
+provider "google" {
+  project = "ekke-cloud"
+  region  = "europe-central2"
+}
+```
+
 ### Commands
 
 ```
@@ -82,4 +106,12 @@ terraform destroy
 
 ```
 terraform fmt
+```
+
+```
+gcloud auth login
+```
+
+```
+gcloud config set project ekke-cloud
 ```
