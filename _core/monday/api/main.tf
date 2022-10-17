@@ -1,5 +1,5 @@
 resource "google_project_service" "project" {
-  project = "ekke_cloud"
+  project = "ekke-cloud"
   service = "compute.googleapis.com"
 
   timeouts {
