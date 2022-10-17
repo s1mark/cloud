@@ -86,6 +86,24 @@ provider "google" {
 }
 ```
 
+#### GCloud VM
+
+##### GCloud Compute API bekapcsolása
+
+```
+resource "google_project_service" "project" {
+  project = "ekke_cloud"
+  service = "compute.googleapis.com"
+
+timeouts {
+  create = "30m"
+  update = "40m"
+}
+
+  disable_dependent_services = true
+}
+```
+
 ### Commands
 
 ```
@@ -110,6 +128,10 @@ terraform fmt
 
 ```
 gcloud auth login
+```
+
+```
+gcloud auth application-default login
 ```
 
 ```
