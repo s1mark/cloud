@@ -12,6 +12,7 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
+  depends_on = [module.api.google_project_service.project]
 }
 
 module "api" {
