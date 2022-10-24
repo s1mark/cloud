@@ -2,19 +2,19 @@ resource "google_project_iam_binding" "project" {
   project = "ekke-cloud"
   role    = "roles/compute.instanceAdmin"
 
-  members = [
-    "user:domi0718nika@gmail.com",
-    "user:erdelyi.roland99@gmail.com",
-    "user:bpuszta@gmail.com",
-    "user:crazymark1lol@gmail.com",
-    "user:tolvibalazs@gmail.com",
-    "user:utassy.denis@gmail.com",
-    "user:sarosigab@gmail.com",
-    "user:banyiknandor1@gmail.com",
-    "user:gaboly15@gmail.com",
-    "user:dragonhun98@gmail.com",
-    "user:richardmatuch@gmail.com",
-    "user:kecsekarolydaniel@gmail.com",
-    "user:vivien.kulcsar88@gmail.com",
-  ]
+  members = var.users
+}
+
+resource "google_project_iam_binding" "osLogin" {
+  project = "ekke-cloud"
+  role    = "roles/compute.osAdminLogin"
+
+  members = var.users
+}
+
+resource "google_project_iam_binding" "iap" {
+  project = "ekke-cloud"
+  role    = "roles/iap.tunnelResourceAccessor"
+
+  members = var.users
 }
