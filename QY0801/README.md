@@ -88,6 +88,51 @@ provider "google" {
 
 #### GCloud VM
 
+##### Szükséges jogok VM készítéshez és az SSH-hoz
+
+```
+resource "google_project_iam_binding" "project" {
+  project = "ekke-cloud"
+  role    = "roles/compute.instanceAdmin"
+
+  members = var.users
+}
+
+resource "google_project_iam_binding" "osLogin" {
+  project = "ekke-cloud"
+  role    = "roles/compute.osAdminLogin"
+
+  members = var.users
+}
+
+resource "google_project_iam_binding" "iap" {
+  project = "ekke-cloud"
+  role    = "roles/iap.tunnelResourceAccessor"
+
+  members = var.users
+}
+```
+
+##### VM készítése
+
+```
+resource "google_compute_instance" "default" {
+  name         = "ekke-cloud-qy0801"
+  machine_type = "f1-micro"
+  zone         = "europe-central2-a"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+    }
+  }
+
+  network_interface {
+    network = "default"
+  }
+}
+```
+
 ##### GCloud Compute API bekapcsolása
 
 ```
