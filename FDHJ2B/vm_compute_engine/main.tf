@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = "ekke-cloud"
+  name         = "fdhj2b"
   machine_type = "f1-micro"
   zone         = "europe-central2-a"
 
