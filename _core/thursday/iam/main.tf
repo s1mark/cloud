@@ -1,6 +1,6 @@
 resource "google_project_iam_binding" "project" {
   project = "ekke-cloud"
-  role    = "roles/viewer"
+  role    = "roles/compute.instanceAdmin"
 
   members = [
     "user:simark2357@gmail.com",
@@ -14,6 +14,7 @@ resource "google_project_iam_binding" "project" {
     "user:konya.donat@gmail.com",
     "user:horvathmarton02@gmail.com",
     "user:imre123456.ing5@gmail.com",
-    "user:batcavechannel@gmail.com"
+    "user:batcavechannel@gmail.com",
+    "user:gerixy20@gmail.com"
   ]
 }
