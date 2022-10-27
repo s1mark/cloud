@@ -15,6 +15,7 @@ resource "google_project_iam_binding" "project" {
     "user:horvathmarton02@gmail.com",
     "user:imre123456.ing5@gmail.com",
     "user:batcavechannel@gmail.com",
-    "user:gerixy20@gmail.com"
+    "user:gerixy20@gmail.com",
+    "user:mviktor2210@gmail.com"
   ]
 }
