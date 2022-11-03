@@ -5,6 +5,6 @@ module "service_account" {
   prefix        = "test-sa"
   names         = ["axaf1w"]
   project_roles = [
-    "project=>roles/viewer",
+    "ekke-cloud=>roles/viewer",
   ]
 }
