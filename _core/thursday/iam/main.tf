@@ -3,9 +3,5 @@ module "project-iam-bindings" {
   projects = ["ekke-cloud"]
   mode     = "additive"
 
-  bindings = {
-    "roles/compute.instanceAdmin" = var.users
-    "roles/compute.osAdminLogin" = var.users
-    "roles/iap.tunnelResourceAccessor" = var.users
-  }
+  bindings = var.bindings
 }
