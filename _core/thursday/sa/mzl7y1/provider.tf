@@ -4,7 +4,7 @@ provider "google" {
 }
 terraform {
   backend "gcs" {
-    bucket  = "ekke-monday"
+    bucket  = "ekke-thursday"
     prefix  = "terraform/sa/mzl7y1"
   }
 }
