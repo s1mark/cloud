@@ -1,6 +1,7 @@
 module "instance_template" {
   source          = "git::https://github.com/terraform-google-modules/terraform-google-vm//modules/instance_template?ref=v7.9.0"
   region          = var.region
+  machine_type    = "f1-micro"
   project_id      = var.project_id
   service_account = var.service_account
   network         = "default"
