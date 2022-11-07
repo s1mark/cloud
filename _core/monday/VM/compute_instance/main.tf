@@ -3,6 +3,7 @@ module "instance_template" {
   region          = var.region
   project_id      = var.project_id
   service_account = var.service_account
+  network         = "default"
 }
 
 module "compute_instance" {
