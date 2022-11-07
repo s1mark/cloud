@@ -1,6 +1,6 @@
 terraform {
  backend "gcs" {
    bucket  = "ekke-monday"
-   prefix  = "terraform/monday/ServiceAccounts/FQ4AC3"
+   prefix  = "terraform/monday/ServiceAccounts/"
  }
 }
