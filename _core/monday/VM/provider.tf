@@ -6,6 +6,6 @@ provider "google" {
 terraform {
  backend "gcs" {
    bucket  = "ekke-monday"
-   prefix  = "terraform/monday/iam"
+   prefix  = "terraform/monday/vm"
  }
 }
