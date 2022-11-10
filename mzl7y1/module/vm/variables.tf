@@ -1,0 +1,1 @@
+# 2 variables for the vm resource
