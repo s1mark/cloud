@@ -1,6 +1,6 @@
 resource "google_compute_instance" "default" {
-  name         = "ekke-cloud"
-  machine_type = "f1-micro"
+  name         = var.vm_name
+  machine_type = var.vm_type
   zone         = "europe-central2-a"
 
   boot_disk {
@@ -12,13 +12,4 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
-  depends_on = [module.api]
-}
-
-module "api" {
-  source = "../api"
-}
-
-module "cl3zhy_vm" {
-  source = "../../../CL3ZHY/modul/vm"
 }
