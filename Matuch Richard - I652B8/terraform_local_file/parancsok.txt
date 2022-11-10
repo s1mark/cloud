@@ -1,3 +1,0 @@
-terraform init // meg van már a test.tf fájl
-terraform plan
-terraform apply

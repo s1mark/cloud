@@ -1,5 +1,0 @@
-terraform fmt	// a tf fájlok szépre formázása
-// a variables.tf-ben változók megadása, ha nincs tisztázva az értéke, stb..., akkor futáskor kér be értéket
-terraform output // miután megvan az apply, az outputokat és id-jüket kiírja
-// ezekre lehet hivatkozni az output.tf fájlban
-terraform plan -var {változó(k) megadása}

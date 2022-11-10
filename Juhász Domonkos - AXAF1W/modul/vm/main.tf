@@ -7,18 +7,5 @@ resource "google_compute_instance" "default" {
       image = "debian-cloud/debian-11"
     }
   }
-  network_interface {
-    network = "default"
-  }
-  //depends_on = [module.variable]
+  network_interface {}
 }
-/*
-module "variable" {
-  source = "variable.tf"
-}
-module "price" {
-  source = "variable.tf"
-}
-module "productName" {
-  source = "variable.tf"
-} */
