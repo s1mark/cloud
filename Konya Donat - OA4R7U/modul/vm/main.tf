@@ -13,7 +13,4 @@ resource "google_compute_instance" "default" {
     network = "default"
   }
 
-  module "vm-oa4r7u" {
-  source = "../../../OA4R7U/module/vm"
-}
 }
