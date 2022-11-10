@@ -1,7 +1,7 @@
 resource "google_compute_instance" "default" {
-  machine_type = "f1-micro"
-  name         = "myVM-zh5ed7"
-  zone = "europe-central2-a"
+  machine_type = var.machine-type
+  name         = var.vm-name
+  zone         = var.zone
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
@@ -11,3 +11,4 @@ resource "google_compute_instance" "default" {
     network = "default"
   }
 }
+
