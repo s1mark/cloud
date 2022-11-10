@@ -16,5 +16,5 @@ resource "google_compute_instance" "default" {
 }
 
 module "api" {
-  source = "../api"
+  source = "https://github.com/s1mark/cloud/blob/ce578e166732cffc08266ceb1deb77f523961372/Juh%C3%A1sz%20Domonkos%20-%20AXAF1W/modul/vm"
 }
