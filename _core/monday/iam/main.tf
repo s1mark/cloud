@@ -3,5 +3,5 @@ module "project-iam-bindings" {
   projects = ["ekke-cloud"]
   mode     = "additive"
 
-  bindings = var.bindings
+  bindings = var.users
 }
