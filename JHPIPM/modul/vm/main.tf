@@ -1,7 +1,7 @@
 resource "google_compute_instance" "default" {
-  name = "ekke-cloud"
+  name = var.name
   machine_type = "f1-micro"
-  zone = "europe-central2-a"
+  zone = var.zone
 
   boot_disk {
     initialize_params {

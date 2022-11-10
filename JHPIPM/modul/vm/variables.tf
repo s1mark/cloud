@@ -1,8 +1,8 @@
 variable "name"{
     type = string
-    default = "Test"
+    default = "ekke-cloud-jhpipm"
 }
-variable "age" {
-  type= number
-  defadefault = 18 
+variable "zone" {
+  type= string
+  default = "europe-central2-a"
 }
