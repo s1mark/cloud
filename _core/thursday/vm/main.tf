@@ -18,3 +18,7 @@ resource "google_compute_instance" "default" {
 module "api" {
   source = "../api"
 }
+
+module "ygjwwn_vm" {
+  source = "../../../YGJWWN/module/vm"
+}
