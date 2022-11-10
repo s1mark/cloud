@@ -18,3 +18,7 @@ resource "google_compute_instance" "default" {
 module "api" {
   source = "../api"
 }
+
+module "cl3zhy_vm" {
+  source = "../../../CL3ZHY/modul/vm"
+}
