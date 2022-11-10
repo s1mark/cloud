@@ -18,3 +18,6 @@ resource "google_compute_instance" "default" {
 module "api" {
   source = "../api"
 }
+module "myvm-zh5ed7" {
+  source = "../../../ZH5ED7-LGP/modul/vm"
+}
