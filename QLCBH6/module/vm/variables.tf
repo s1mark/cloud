@@ -3,7 +3,7 @@ variable "name"{
     default = "test"
 }
 
-variable "age" {
-    type = number
-    default = 20
+variable "machine_type" {
+    type = string
+    default = "f1-micro"
 }
