@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = vm_name
+  name         = var.vm_name
   machine_type = "f1-micro"
   zone         = "europe-central2-a"
 
@@ -10,6 +10,6 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = network-variable
+    network = var.network-variable
   }
 }
