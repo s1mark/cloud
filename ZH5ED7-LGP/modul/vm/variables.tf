@@ -1,6 +1,6 @@
 variable "vm-name" {
   type = string
-  default = "myVm-ZH5ED7"
+  default = "myvm-zh5ed7"
 }
 
 variable "machine-type" {
