@@ -1,6 +1,6 @@
 variable "vm_name" {
   type = string
-  default = "ekke-cloud-CL3ZHY"
+  default = "ekke-cloud-cl3zhy"
 }
 
 variable "vm_type" {
