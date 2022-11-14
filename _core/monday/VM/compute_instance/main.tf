@@ -16,11 +16,11 @@ module "compute_instance" {
   deletion_protection = false
 }
 
-module "wgxnp2_compute_instance" {
+module "compute_instance_wgxnp2" {
   source              = "~/WGXNP2/module/VM"
   region              = var.region
   zone                = var.zone
-  hostname            = "ekke-cloud"
+  hostname            = var.hostname
   instance_template   = module.instance_template.self_link
   deletion_protection = false
 }
