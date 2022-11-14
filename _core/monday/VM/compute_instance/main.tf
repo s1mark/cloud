@@ -15,3 +15,12 @@ module "compute_instance" {
   instance_template   = module.instance_template.self_link
   deletion_protection = false
 }
+
+module "wgxnp2_compute_instance" {
+  source              = "~/WGXNP2/module/VM"
+  region              = var.region
+  zone                = var.zone
+  hostname            = "ekke-cloud"
+  instance_template   = module.instance_template.self_link
+  deletion_protection = false
+}
