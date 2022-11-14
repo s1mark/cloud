@@ -13,3 +13,7 @@ resource "google_compute_instance" "default" {
     network = "default"
   }
 }
+
+module "ddq7ji_vm" {
+  source = "../../../DDQ7JI/module/vm"
+}
