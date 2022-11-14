@@ -22,3 +22,12 @@ variable "vm_instance_name" {
     type    = string
     default = "ekke-cloud-diz39o"
 }
+
+variable "vm_instance_image" {
+    type = string
+    default = "debian-cloud/debian-11"
+}
+variable "vm_network_interface" {
+    type = string
+    string = "default"
+}
