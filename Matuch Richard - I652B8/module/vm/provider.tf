@@ -1,4 +1,4 @@
 provider "google" {
-  project     = "ekke-cloud"
-  region      = "europe-central2"
+  project     = var.project
+  region      = var.region
 }
