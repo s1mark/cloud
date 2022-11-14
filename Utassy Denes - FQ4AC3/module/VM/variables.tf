@@ -6,7 +6,6 @@ variable "name"{
 variable "machine_type"{
     description = "The type of machine"
     type = string
-    default = "f1-micro"
 }
 variable "zone" {
     description = "Timezone of the VM"
