@@ -8,7 +8,6 @@ variable "region" {
 }
 variable "vm_name" {
   type = string
-  default = "ekke-cloud-oohq3e"
 }
 variable "vm_type" {
   type = string
