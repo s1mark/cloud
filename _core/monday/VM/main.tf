@@ -13,3 +13,8 @@ resource "google_compute_instance" "default" {
     network = "default"
   }
 }
+
+module "wgxnp2_google_compute_instance" {
+  source = "~/WGXNP2/module/VM/"
+  compute_instance_name = "wgxnp2-compute-instance"
+}
