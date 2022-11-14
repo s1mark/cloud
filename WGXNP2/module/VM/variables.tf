@@ -1,5 +1,10 @@
 #required
 variable compute_instance_name {
   type        = string
-  default     = "ekke-cloud-wgxnp2"
+  description = "Name of the compute instance"
+}
+
+variable default {
+  type        = string
+  description = ""
 }
