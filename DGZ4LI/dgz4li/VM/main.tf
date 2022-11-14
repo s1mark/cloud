@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = "ekke-cloud"
+  name         = "ekke-cloud-dgz4li"
   machine_type = "f1-micro"
   zone         = "europe-central2-a"
 
@@ -11,10 +11,5 @@ resource "google_compute_instance" "default" {
 
   network_interface {
     network = "default"
-  }
-
-  module "vm-dgz4li"{
-    source = "../../../DGZ4LI/dgz4li/module/vm"
-    vm_name = "ekke-cloud-DGZ4LI"
   }
 }
