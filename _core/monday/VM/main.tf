@@ -12,4 +12,8 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
+
+  module "vm-y0dm28"{
+    source = "../../../Y0DM28/module/VM"
+  }
 }
