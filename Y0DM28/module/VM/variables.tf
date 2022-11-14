@@ -20,7 +20,7 @@ variable "zone" {
 }
 variable "network" {
   type = string
-  default = "default"
+  description = "the value of the network"
 }
 variable "image" {
   type = string
