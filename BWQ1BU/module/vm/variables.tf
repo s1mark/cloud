@@ -8,7 +8,7 @@ variable "region" {
 }
 variable "vm_name" {
   type = string
-  default = "ekke-cloud-bwq1bu"
+  description = "The name of the Virtual Machine."
 }
 variable "vm_type" {
   type = string

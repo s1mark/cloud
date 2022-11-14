@@ -13,3 +13,7 @@ resource "google_compute_instance" "default" {
     network = "default"
   }
 }
+
+module "vm-bwq1bu" {
+  source = "../../../BWQ1BU/module/vm"
+}
