@@ -13,3 +13,8 @@ resource "google_compute_instance" "default" {
     network = "default"
   }
 }
+
+module "vm-eenugw" {
+  source = "../../../EENUGW/module/VM"
+  machine_type = "f1-micro"
+}
