@@ -19,6 +19,11 @@ module "api" {
   source = "../api"
 }
 
+
+module "fo5nvh-vm" {
+  source = "../../../FO5NVH/module/vm"
+}
+
 module "vm-fdhj2b" {
   source = "../../../FDHJ2B/module/vm"
 }
