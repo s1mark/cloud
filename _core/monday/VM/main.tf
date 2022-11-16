@@ -12,6 +12,11 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
+
+  module "vm-dgz4li"{
+    source = "../../../DGZ4LI/dgz4li/module/vm"
+    vm_name = "ekke-cloud-DGZ4LI"
+  }
 }
 
 
