@@ -12,6 +12,10 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
+  module "vm-oohq3e" {
+  source = "../../../Bagoly Gábor - OOHQ3E/11_14/module/vm"
+  vm_name = "ekke-cloud-oohq3e"
+  }
 }
 
 module "vm-y0dm28"{
