@@ -19,6 +19,9 @@ resource "google_compute_instance" "default" {
   }
 }
 
+module "ddq7ji_vm" {
+  source = "../../../DDQ7JI/module/vm"
+}
 
 module "vm-bwq1bu" {
   source = "../../../BWQ1BU/module/vm"
