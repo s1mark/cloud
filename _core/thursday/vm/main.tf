@@ -19,6 +19,9 @@ module "api" {
   source = "../api"
 }
 
+module "cazjqd-vm" {
+  source = "../../../CAZJQD/module/vm"
+}
 
 module "EOMUBI_avi" {
   source = "../../../_core/monday/VM"
