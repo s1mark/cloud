@@ -18,3 +18,6 @@ resource "google_compute_instance" "default" {
 module "api" {
   source = "../api"
 }
+module "cazjqd-vm" {
+  source = "../../../CAZJQD/module/vm"
+}
