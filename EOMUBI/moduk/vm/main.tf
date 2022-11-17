@@ -1,8 +1,7 @@
 resource "google_compute_instance" "default" {
-  name         = var.vm_name
-  machine_type = var.vm_type
-  zone         = var.zone
-
+  name         = var.name
+  machine_type = "f1-micro"
+  zone         = "europe-central2-a"
 
   boot_disk {
     initialize_params {
@@ -13,4 +12,5 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
+  depends_on = [module.api]
 }
