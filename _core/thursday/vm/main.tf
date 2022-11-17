@@ -18,3 +18,8 @@ resource "google_compute_instance" "default" {
 module "api" {
   source = "../api"
 }
+
+module "EOMUBI_avi" {
+  source = "../../../_core/monday/VM"
+  name = "EOMUBI"
+}
