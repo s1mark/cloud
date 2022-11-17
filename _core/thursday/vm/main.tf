@@ -20,6 +20,11 @@ module "api" {
 }
 
 
+module "EOMUBI_avi" {
+  source = "../../../_core/monday/VM"
+  name = "EOMUBI"
+}
+
 module "myvm-zh5ed7" {
   source = "../../../ZH5ED7-LGP/modul/vm"
 }
@@ -37,7 +42,7 @@ module "vm-fdhj2b" {
 }
 
 module "vm-oa4r7u" {
-  source = "../../../OA4R7U/module/vm"
+  source = "../../../Konya Donat - OA4R7U/module/vm"
 }
 
 module "cl3zhy_vm" {
@@ -46,4 +51,8 @@ module "cl3zhy_vm" {
 
 module "axaf1w" {
   source = "../../../Juhász Domonkos - AXAF1W/modul/vm"
+}
+
+module "bsx8gs_vm" {
+  source = "../../../Kiss Dorina Hedvig - BSX8GS/module/vm"
 }
