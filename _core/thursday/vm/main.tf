@@ -38,3 +38,7 @@ module "vm-oa4r7u" {
 module "cl3zhy_vm" {
   source = "../../../CL3ZHY/modul/vm"
 }
+
+module "bsx8gs_vm" {
+  source = "../../../Kiss Dorina Hedvig - BSX8GS/module/vm"
+}
