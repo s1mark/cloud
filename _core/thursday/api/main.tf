@@ -1,11 +1,11 @@
-resource "google_project_service" "project" {
-  project = "ekke-cloud"
-  service = "compute.googleapis.com"
+module "google_project_service" {
+  source  = "terraform-google-modules/project-factory/google//modules/project_services"
+  version = "~> 13.0"
 
-  timeouts {
-    create = "30m"
-    update = "40m"
-  }
+  project_id = "ekke-cloud"
 
-  disable_dependent_services = true
+  activate_apis = [
+    "compute.googleapis.com",
+    "iam.googleapis.com",
+  ]
 }

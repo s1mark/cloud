@@ -19,6 +19,27 @@ module "api" {
   source = "../api"
 }
 
+
 module "myvm-zh5ed7" {
   source = "../../../ZH5ED7-LGP/modul/vm"
+}
+
+module "ygjwwn_vm" {
+  source = "../../../YGJWWN/module/vm"
+}
+
+module "fo5nvh-vm" {
+  source = "../../../FO5NVH/module/vm"
+}
+
+module "vm-fdhj2b" {
+  source = "../../../FDHJ2B/module/vm"
+}
+
+module "vm-oa4r7u" {
+  source = "../../../OA4R7U/module/vm"
+}
+
+module "cl3zhy_vm" {
+  source = "../../../CL3ZHY/modul/vm"
 }
