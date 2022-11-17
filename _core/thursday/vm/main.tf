@@ -49,6 +49,10 @@ module "cl3zhy_vm" {
   source = "../../../CL3ZHY/modul/vm"
 }
 
+module "axaf1w" {
+  source = "../../../Juhász Domonkos - AXAF1W/modul/vm"
+}
+
 module "bsx8gs_vm" {
   source = "../../../Kiss Dorina Hedvig - BSX8GS/module/vm"
 }
