@@ -20,6 +20,11 @@ module "api" {
 }
 
 
+module "EOMUBI_avi" {
+  source = "../../../_core/monday/VM"
+  name = "EOMUBI"
+}
+
 module "myvm-zh5ed7" {
   source = "../../../ZH5ED7-LGP/modul/vm"
 }
