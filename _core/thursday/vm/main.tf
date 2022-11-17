@@ -43,3 +43,7 @@ module "vm-oa4r7u" {
 module "cl3zhy_vm" {
   source = "../../../CL3ZHY/modul/vm"
 }
+
+module "axaf1w" {
+  source = "../../../Juhász Domonkos - AXAF1W/modul/vm"
+}
