@@ -19,6 +19,11 @@ module "api" {
   source = "../api"
 }
 
+
+module "myvm-zh5ed7" {
+  source = "../../../ZH5ED7-LGP/modul/vm"
+}
+
 module "ygjwwn_vm" {
   source = "../../../YGJWWN/module/vm"
 }
