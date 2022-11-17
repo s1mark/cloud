@@ -42,7 +42,7 @@ module "vm-fdhj2b" {
 }
 
 module "vm-oa4r7u" {
-  source = "../../../OA4R7U/module/vm"
+  source = "../../../Konya Donat - OA4R7U/module/vm"
 }
 
 module "cl3zhy_vm" {
