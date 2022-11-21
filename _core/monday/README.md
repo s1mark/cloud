@@ -8,6 +8,9 @@ Properties of the bucket:
 - Simple region (`europe-central2`)
 - Everthing else default
 
+## Use remote state file
+You will have to store your terraform state file in the created bucket
+
 ## Create codebase
 Store your code in the https://github.com/s1mark/cloud repository under your personal folder
 - `<personal_folder>/beadando/`
@@ -38,5 +41,5 @@ Create the following disk:
 - size: `10`
 - physical_block_size_bytes: `4096`
 
-## Attache disk to VM
+## Attach disk to VM
 Attach the created disk to the VM
