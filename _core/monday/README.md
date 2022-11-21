@@ -11,6 +11,20 @@ Properties of the bucket:
 ## Use remote state file
 You will have to store your terraform state file in the created bucket
 
+## Use atleast 3 variables
+You can decide which property you want use
+
+## Create 3 outputs
+After code completion you should represent 3 outputs. An example could be using the `google_project` datasource
+```terraform
+data "google_project" "project" {
+}
+
+output "project_number" {
+  value = data.google_project.project.number
+}
+```
+
 ## Create codebase
 Store your code in the https://github.com/s1mark/cloud repository under your personal folder
 - `<personal_folder>/beadando/`
