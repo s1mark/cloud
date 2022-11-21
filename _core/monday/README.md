@@ -14,6 +14,12 @@ You will have to store your terraform state file in the created bucket
 ## Use atleast 3 variables
 You can decide which property you want use
 
+## Use clean file structure
+- `main.tf`
+- `provider.tf`
+- `variables.tf`
+- `outputs.tf`
+
 ## Create 3 outputs
 After code completion you should represent 3 outputs. An example could be using the `google_project` datasource
 ```terraform
