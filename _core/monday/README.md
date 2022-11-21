@@ -1,5 +1,9 @@
 # Tasks
 
+## Create codebase
+Store your code in the https://github.com/s1mark/cloud repository under your personal folder
+- `<personal_folder>/beadando/`
+
 ## Create bucket
 Create your own storage bucket through the UI
 - https://console.cloud.google.com/storage/browser?project=ekke-cloud
@@ -30,11 +34,6 @@ output "project_number" {
   value = data.google_project.project.number
 }
 ```
-
-## Create codebase
-Store your code in the https://github.com/s1mark/cloud repository under your personal folder
-- `<personal_folder>/beadando/`
-
 ## Create a service account
 The name of the service account should be your Neptun code.
 
