@@ -19,6 +19,7 @@ You will have to store your terraform state file in the created bucket
 You can decide which property you want use
 
 ## Use clean file structure
+The solution can be one codebase or several modules
 - `main.tf`
 - `provider.tf`
 - `variables.tf`
