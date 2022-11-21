@@ -3,6 +3,7 @@
 ## Create codebase
 Store your code in the https://github.com/s1mark/cloud repository under your personal folder
 - `<personal_folder>/beadando/`
+- Create a pull request and the name of it should be your Neptun code
 
 ## Create bucket
 Create your own storage bucket through the UI
