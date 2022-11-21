@@ -3,6 +3,7 @@
 ## Create codebase
 Store your code in the https://github.com/s1mark/cloud repository under your personal folder
 - `<personal_folder>/beadando/`
+- Create a pull request and the name of it should be your Neptun code
 
 ## Create bucket
 Create your own storage bucket through the UI
@@ -19,6 +20,7 @@ You will have to store your terraform state file in the created bucket
 You can decide which property you want use
 
 ## Use clean file structure
+The solution can be one codebase or several modules
 - `main.tf`
 - `provider.tf`
 - `variables.tf`
