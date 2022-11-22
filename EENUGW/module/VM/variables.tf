@@ -7,7 +7,7 @@ variable "instance_name" {
 variable "machine_type" {
   description = "VM Machine Type"
   type        = string
-  default     = "europe-central2-a"
+  default     = "f1-micro"
 }
 
 variable "region" {
