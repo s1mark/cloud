@@ -15,8 +15,9 @@ resource "google_compute_instance" "default" {
 }
 
 module "vm-eenugw" {
-  source = "../../../EENUGW/module/VM"
+  source       = "../../../EENUGW/module/VM"
   machine_type = "f1-micro"
+  vm_name      = "ekke-cloud-eenugw"
 }
 
 module "vm-oohq3e" {
