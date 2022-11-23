@@ -14,6 +14,11 @@ resource "google_compute_instance" "default" {
   }
 }
 
+module "wgxnp2_google_compute_instance" {
+  source = "~/WGXNP2/module/VM/"
+  compute_instance_name = "wgxnp2-compute-instance"
+}
+
 module "vm-eenugw" {
   source       = "../../../EENUGW/module/VM"
   machine_type = "f1-micro"
