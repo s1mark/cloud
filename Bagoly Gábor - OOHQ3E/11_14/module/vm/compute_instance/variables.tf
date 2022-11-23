@@ -16,6 +16,12 @@ variable "zone" {
   default     = "europe-central2-a"
 }
 
+variable hostname {
+  type        = string
+  description = "Value of the host's name."
+}
+
+
 variable "service_account" {
   default = null
   type = object({
