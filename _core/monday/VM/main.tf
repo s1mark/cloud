@@ -14,6 +14,12 @@ resource "google_compute_instance" "default" {
   }
 }
 
+module "vm-eenugw" {
+  source       = "../../../EENUGW/module/VM"
+  machine_type = "f1-micro"
+  vm_name      = "ekke-cloud-eenugw"
+}
+
 module "vm-oohq3e" {
   source = "../../../Bagoly Gábor - OOHQ3E/11_14/module/vm"
   vm_name = "ekke-cloud-oohq3e"
