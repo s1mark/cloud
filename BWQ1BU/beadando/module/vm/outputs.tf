@@ -1,12 +1,9 @@
-data "google_project" "project" {
+output "vm_name" {
+  value = data.google_compute_instance.vm_data.name
 }
-
-output "project_number" {
-  value = data.google_project.project.number
-}
-output "project_id" {
-  value = data.google_project.project.id
+output "neptun" {
+  value = "BWQ1BU"
 }
 output "created_by" {
-  value = "Kecse Károly Dániel (BWQ1BU)"
+  value = "Kecse Károly Dániel"
 }

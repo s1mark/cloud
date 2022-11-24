@@ -1,6 +1,6 @@
 provider "google" {
-  project     = "ekke-cloud"
-  region      = "europe-central2"
+  project     = var.project
+  region      = var.region
 }
 
 //https://cloud.google.com/docs/terraform/resource-management/store-state

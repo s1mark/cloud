@@ -15,6 +15,9 @@ resource "google_compute_instance" "default" {
       image = var.disk_image
     }
   }
+  network_interface {
+    network = "default"
+  }
 
   // Create a file on the VM
   metadata_startup_script = "echo done > ~/test.txt"
@@ -42,4 +45,8 @@ resource "google_compute_disk" "default" {
 resource "google_compute_attached_disk" "default" {
   disk     = google_compute_disk.default.id
   instance = google_compute_instance.default.id
+}
+
+data "google_compute_instance" "vm_data" {
+  name = google_compute_instance.default.name
 }

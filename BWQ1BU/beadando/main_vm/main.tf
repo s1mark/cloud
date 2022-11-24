@@ -1,7 +1,7 @@
-module "bwq1bu-module" {
+module "bwq1bu-mod" {
 	source                          = "../module/vm"
-	service_account_display_name    = "BWQ1BU Service Account"
-	vm_name                         = "bwq1bu-vm"
-	disk_name                       = "bwq1bu-disk"
+	service_account_display_name    = var.sa_display_name
+	vm_name                         = var.vm_name
+	disk_name                       = var.disk_name
 }
  
