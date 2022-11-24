@@ -3,6 +3,11 @@ variable "project" {
     default = "ekke-cloud"
 }
 
+variable "project_id" {
+    type = string
+    default = "ekke-cloude"
+}
+
 variable "region" {
     type = string
     default = "europe-central2" 

@@ -8,11 +8,6 @@ variable "region" {
   default = "europe-central2"
 }
 
-variable "bucket" {
-  type = string
-  default = "cl3zhy"
-}
-
 variable "account_display_name" {
   type = string
   default = "cl3zhy-account"

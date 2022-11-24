@@ -6,6 +6,6 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = var.bucket
+    bucket = "cl3zhy"
   }
 }
