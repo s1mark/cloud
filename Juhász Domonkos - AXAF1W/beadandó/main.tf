@@ -1,7 +1,6 @@
 resource "google_service_account" "service_account" { //create service account
   account_id   = "axaf1w"
   display_name = "axaf1w"
-  scope = ["monitoring "]
 }
 
 resource "google_compute_instance" "default" {
