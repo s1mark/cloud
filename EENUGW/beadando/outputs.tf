@@ -1,12 +1,3 @@
-data "google_project" "project" { 
-
-}
-
-data "google_compute_disk" "disk" { 
-  name = var.neptun_code
-  zone = var.project_zone
-}
-
 output "project_number" {
   value = data.google_project.project.number
 }

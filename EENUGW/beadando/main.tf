@@ -33,6 +33,15 @@ resource "google_compute_disk" "disk" {
   physical_block_size_bytes = 4096
 }
 
+data "google_project" "project" { 
+
+}
+
+data "google_compute_disk" "disk" { 
+  name = var.neptun_code
+  zone = var.project_zone
+}
+
 terraform {
   backend "gcs" {
     bucket  = "eenugw"
