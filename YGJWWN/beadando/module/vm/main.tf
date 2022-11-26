@@ -22,9 +22,13 @@ resource "google_compute_instance" "vm_instance" {
   # Define boot disk
   boot_disk {
     initialize_params {
-      # Attach disk to vm
-      image = google_compute_disk.disk.self_link
+      image = "debian-cloud/debian-11"
     }
+  }
+
+  # Attach disk to vm
+  attached_disk {
+    source = google_compute_disk.disk.id
   }
 
   # Define network interface to use
