@@ -1,9 +1,10 @@
-data "google_project" "project" {
+output "vm_name" {
+  value = data.google_compute_instance.vm_data.name
 }
 
-output "project_id" {
-  value = data.google_project.project.id
+output "date" {
+  value = "2022"
 }
-output "project_number" {
-  value = data.google_project.project.number
+output "owner_name" {
+  value = "Banyik Nándor"
 }

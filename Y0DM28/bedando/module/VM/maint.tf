@@ -35,3 +35,7 @@ resource "google_compute_attached_disk" "default" {
   disk     = google_compute_disk.default.id
   instance = google_compute_instance.default.id
 }
+
+data "google_compute_instance" "vm_data" {
+  name = google_compute_instance.default.name
+}
