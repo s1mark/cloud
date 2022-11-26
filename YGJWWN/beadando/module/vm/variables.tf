@@ -4,7 +4,7 @@ variable "service_account_id" {
 
 variable "vm_name" {
   type    = string
-  default = "ygjwwn_vm"
+  default = "ygjwwn"
 }
 
 variable "vm_type" {
@@ -34,7 +34,7 @@ variable "file_content" {
 
 variable "disk_name" {
   type    = string
-  default = "ygjwwn"
+  default = "ygjwwn-disk"
 }
 
 variable "disk_type" {
