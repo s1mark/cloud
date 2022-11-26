@@ -22,9 +22,14 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
-}
 
-metadata_startup_script = "echo done > ~/test.txt"
+    service_account {
+    email  = google_service_account.service_account.email
+    scopes = ["monitoring"]
+  }
+
+  metadata_startup_script = "echo done > ~/test.txt"
+}
 
 resource "google_compute_disk" "default" {
       name = "bsx8gs"
