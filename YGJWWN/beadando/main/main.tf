@@ -1,9 +1,9 @@
 # Call vm module
-module "ygjwwn_vm" {
+module "vm" {
   source             = "../module/vm"
   vm_name            = "ygjwwn"
-  machine_type       = "f1-micro"
-  zone               = "europe-central2-a"
+  vm_type       = "f1-micro"
+  vm_zone               = "europe-central2-a"
   service_account_id = "ygjwwn"
 }
 
