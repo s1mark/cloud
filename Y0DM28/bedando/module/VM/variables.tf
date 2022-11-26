@@ -26,7 +26,7 @@ variable "image" {
   type = string
   default = "debian-cloud/debian-11"
 }
-variable service_account_id {
+variable "service_account_id" {
     type = string
     default = "y0dm28"
 } 
