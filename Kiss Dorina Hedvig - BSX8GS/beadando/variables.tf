@@ -8,7 +8,7 @@ variable "region" {
 }
 variable "vm_name" {
   type = string
-  default = "BSX8GS"
+  default = "bsx8gs"
 }
 variable "vm_type" {
   type = string

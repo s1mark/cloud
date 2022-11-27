@@ -5,7 +5,7 @@ provider "google" {
 
 terraform {
  backend "gcs" {
-   bucket  = var.bucket
+   bucket  = "bsx8gs"
    prefix  = "bsx8gs-"
  }
 }

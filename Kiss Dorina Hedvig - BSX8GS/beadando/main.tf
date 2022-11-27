@@ -1,7 +1,11 @@
 resource "google_service_account" "default" {
-  account_id   = var.vm_name
+  account_id   = "bsx8gs-beadando"
   display_name = var.sa_name
-  project_id = var.project
+}
+
+resource "google_compute_attached_disk" "default" {
+  disk     = google_compute_disk.default.id
+  instance = google_compute_instance.default.id
 }
 
 resource "google_compute_instance" "default" {
@@ -14,9 +18,6 @@ resource "google_compute_instance" "default" {
       image = "debian-cloud/debian-11"
     }
 
-    attached_disk {
-        source = google_compute_disk.default.id
-    }
   }
 
   network_interface {
@@ -24,7 +25,7 @@ resource "google_compute_instance" "default" {
   }
 
     service_account {
-    email  = google_service_account.service_account.email
+    email  = "k.dorina33@gmail.com"
     scopes = ["monitoring"]
   }
 
@@ -39,9 +40,6 @@ resource "google_compute_disk" "default" {
       size = 10
       physical_block_size_bytes = 4096
 
-  tags = {
-    environment = "staging"
-  }
 }
 
 data "google_compute_instance" "vm_data" {
