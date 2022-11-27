@@ -12,14 +12,12 @@ resource "google_compute_instance" "default" {
     network = "default"
   }
   metadata_startup_script = "echo done > ~/task" //Create a file on the VM
-}
 
   attached_disk {
     source = google_compute_disk.default.id
   }
 
   service_account {
-    email = module.sa.email
     scopes = ["monitoring"]
   }
 }
@@ -33,12 +31,12 @@ resource "google_compute_disk" "default" {
   physical_block_size_bytes = var.disk_block_size_bytes
 }
 
-module "api" {
-  source = "../api"
+module "API" {
+  source = "../API"
   project_id = var.project_id
 }
 
-module "sa" {
-  source = "../sa"
+module "Service_Account" {
+  source = "../Service_Account"
   project_id = var.project_id
 }

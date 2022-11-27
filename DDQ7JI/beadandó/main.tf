@@ -1,5 +1,5 @@
-module "vm" {
-    source = "./vm"
+module "VM" {
+    source = "./VM"
     project_id = "ekke-cloud"
     image = "debian-cloud/debian-11"
     nep_name = "ddq7ji"
