@@ -1,6 +1,7 @@
-data "google_project" "project" {
+output "compute_vm_id" {
+  value = google_compute_instance.compute_vm.id
 }
 
-output "project_number" {
-  value = data.google_project.project.number
+output "compute_vm_external_ip" {
+  value = google_compute_instance.compute_vm.network_interface.0.network_ip
 }

@@ -1,42 +1,50 @@
 variable "project" {
-  type = string
+  type    = string
   default = "ekke-cloud"
 }
+
 variable "region" {
-  type = string
+  type    = string
   default = "europe-central2"
 }
+
 variable "vm_name" {
   type = string
 }
 
 variable "vm_type" {
-  type = string
+  type    = string
   default = "f1-micro"
 }
+
 variable "zone" {
-  type = string
+  type    = string
   default = "europe-central2-a"
 }
+
 variable "service_account_id" {
-  type    = string
+  type = string
 }
 
 variable "disk_name" {
   type = string
 }
+
 variable "disk_type" {
   type    = string
   default = "pd-standard"
 }
+
 variable "disk_image" {
   type    = string
   default = "debian-11-bullseye-v20220719"
 }
+
 variable "disk_size" {
   type    = number
   default = 10
 }
+
 variable "disk_block_size" {
   type    = number
   default = 4096
