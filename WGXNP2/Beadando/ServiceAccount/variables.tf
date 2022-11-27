@@ -17,7 +17,3 @@ variable "project_name" {
   type = string
   default = "ekke-cloud"
 }
-
-variable "service_account_email" {
-  type = string
-}

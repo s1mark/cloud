@@ -18,7 +18,6 @@ resource "google_compute_instance" "default" {
   }
 
   service_account {
-    email = modules.service_account.default.email
     scopes = ["monitoring"]
   }
 
