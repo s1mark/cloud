@@ -7,7 +7,7 @@ resource "google_compute_instance" "default" {
   name         = var.vm_name
   machine_type = var.vm_type
   zone         = var.zone
-
+  
   boot_disk {
     initialize_params {
       image = var.disk_image
@@ -16,9 +16,13 @@ resource "google_compute_instance" "default" {
 
   metadata_startup_script = "echo done > ~/task"
 
+  network_interface {
+      network = "default"
+  }
+  
   service_account {   
     email  = google_service_account.default.email
-    scopes = ["monitoring "]
+    scopes = ["monitoring"]
   }
 }
 
@@ -34,8 +38,4 @@ resource "google_compute_disk" "default" {
 resource "google_compute_attached_disk" "default" {
   disk     = google_compute_disk.default.id
   instance = google_compute_instance.default.id
-}
-
-data "google_compute_instance" "vm_data" {
-  name = google_compute_instance.default.name
 }

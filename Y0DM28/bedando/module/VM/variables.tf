@@ -18,10 +18,6 @@ variable "zone" {
   type = string
   default = "europe-central2-a"
 }
-variable "network" {
-  type = string
-  description = "the value of the network"
-}
 variable "image" {
   type = string
   default = "debian-cloud/debian-11"

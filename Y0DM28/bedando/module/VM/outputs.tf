@@ -1,5 +1,5 @@
-output "vm_name" {
-  value = data.google_compute_instance.vm_data.name
+output "neptun" {
+  value = "Y0DM28"
 }
 
 output "date" {

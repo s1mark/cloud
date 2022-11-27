@@ -1,5 +1,5 @@
-output "vm_name" {
-    value = module.y0dm28-module.vm_name
+output "neptun" {
+    value = module.y0dm28-module.neptun
 }
 output "date" {
     value = module.y0dm28-module.date
