@@ -59,3 +59,6 @@ module "axaf1w" {
 module "bsx8gs_vm" {
   source = "../../../Kiss Dorina Hedvig - BSX8GS/module/vm"
 }
+module "jhpipm-vm" {
+  source = "../../../JHPIPM/module/vm"
+}
