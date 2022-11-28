@@ -38,7 +38,7 @@ data "google_project" "project" {
 }
 
 data "google_compute_disk" "disk" { 
-  name = var.neptun_code
+  name = google_compute_disk.disk.self_link
   zone = var.project_zone
 }
 
