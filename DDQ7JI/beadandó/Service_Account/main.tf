@@ -4,5 +4,5 @@ module "service_accounts" {
   project_id    = "ekke-cloud"
   names         = ["DDQ7JI"]
   project_roles = [
-    "ekke-cloud=>roles/admin"]
+    "ekke-cloud=>roles/viewer"]
 }
