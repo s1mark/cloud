@@ -1,10 +1,6 @@
-module "google_service_account" {
-  source        = "terraform-google-modules/service-accounts/google"
-  version       = "~> 3.0"
-  project_id    = var.project_id
-  prefix        = ""
-  names         = ["cl3zhy"]
-  project_roles = ["${var.project_id}=>roles/monitoring.admin"]
+resource "google_service_account" "default" {
+  account_id = var.service_account_id
+  display_name = var.service_account_name
 }
 
 resource "google_compute_instance" "default" {
@@ -25,7 +21,7 @@ resource "google_compute_instance" "default" {
   metadata_startup_script = "echo done_cl3zhy > ~/test.txt"
 
   service_account {
-    email = module.google_service_account.email
+    email = google_service_account.default.email
     scopes = ["monitoring"]
   }
 }
@@ -41,7 +37,8 @@ resource "google_compute_disk" "default" {
 
 resource "google_compute_attached_disk" "default" {
   disk = google_compute_disk.default.id
-  instance = google_compute_disk.default.id
+  instance = google_compute_instance.default.id
+  zone = google_compute_disk.default.zone
 }
 
 data "google_project" "project" {}
