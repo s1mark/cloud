@@ -1,5 +1,5 @@
 module "service_account" {
-  source = "../ServiceAccount"
+  source = "../Modules/ServiceAccount"
 }
 
 resource "google_compute_instance" "default" {
@@ -18,10 +18,16 @@ resource "google_compute_instance" "default" {
   }
 
   service_account {
+    email = module.service_account.email
     scopes = ["monitoring"]
   }
 
   metadata_startup_script = "echo done > ~/task"
+}
+
+resource "google_compute_attached_disk" "default" {
+  disk     = module.compute_disk.disk_id
+  instance = google_compute_instance.default.id
 }
 
 module "compute_disk" {
