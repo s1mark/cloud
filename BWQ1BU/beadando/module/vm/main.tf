@@ -26,7 +26,7 @@ resource "google_compute_instance" "default" {
   // Assign service account to VM
   service_account {   
     email  = google_service_account.default.email
-    scopes = ["monitoring "]
+    scopes = ["monitoring"]
   }
 }
 
@@ -49,4 +49,5 @@ resource "google_compute_attached_disk" "default" {
 
 data "google_compute_instance" "vm_data" {
   name = google_compute_instance.default.name
+  zone = google_compute_instance.default.zone
 }
