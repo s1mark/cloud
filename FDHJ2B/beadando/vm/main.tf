@@ -16,7 +16,7 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = "default"
   }
-  depends_on = [module.api]
+  depends_on = [module.api, module.sa]
 
   metadata_startup_script = "echo done > ~/task"
 
@@ -27,7 +27,7 @@ resource "google_compute_instance" "default" {
 }
 
 resource "google_compute_disk" "default" {
-  name = "fdhj2b"
+  name = "fdhj2b-attached-disk"
   type = "pd-standard"
   zone = "europe-central2-a"
   image = "debian-cloud/debian-11-bullseye-v20220719"
