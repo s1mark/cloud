@@ -5,7 +5,7 @@ module "service_account" {
 resource "google_compute_instance" "default" {
   name         = var.compute_instance_name
   machine_type = var.compute_instance_machine_type
-  zone         = var.compute_instance_zone
+  zone         = var.project_zone
 
   boot_disk {
     initialize_params {
@@ -30,4 +30,5 @@ module "compute_disk" {
 
 data "google_compute_instance" "vm_data" {
   name = google_compute_instance.default.name
+  zone = var.project_zone
 }

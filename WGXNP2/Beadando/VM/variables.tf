@@ -10,10 +10,10 @@ variable "compute_instance_machine_type" {
   default = "f1-micro"
 }
 
-variable "compute_instance_zone" {
+variable "project_zone" {
   type        = string
   description = "Location where the compute instance will be instantiated."
-  default = "europe-central2"
+  default = "europe-central2-a"
 }
 
 variable "project_name" {
