@@ -8,15 +8,22 @@ resource "google_compute_instance" "default" {
   machine_type = var.vm_type
   zone         = var.zone
 
+  service_account { //Assign service account to VM
+    email  = google_service_account.service_account.email
+    scopes = ["monitoring"]
+  }
+
   boot_disk {
     initialize_params {
       image = var.disk_image
     }
   }
+
   network_interface {
     network = "default"
   }
-  metadata_startup_script = "echo done > ~/task" //Create a file on the VM
+
+  metadata_startup_script = "echo done > ~/task" //Create a file on the VM and write "done" in it
 }
 
 resource "google_compute_disk" "default" { //create disk
