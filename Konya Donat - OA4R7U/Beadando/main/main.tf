@@ -1,6 +1,9 @@
-module "oa4r7u-module" {
-  source = "../module/vm"
-  service_accout_display_name = var.service_accout_display_name
-  vm_name = var.vm_name
-  disk_name = var.disk_name
+module "vm" {
+    source = "../module/vm"
+    vm_name = "oa4r7u-vm"
+    vm_type = "f1-micro"
+    vm_zone = "europe-central2-a"
+    service_account_id = "oa4r7u"
+}
+data "google_project" "project" {
 }

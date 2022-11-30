@@ -1,8 +1,3 @@
-variable "service_accout_display_name" {
-  type = string
-  default = "OA4R7U Service Account"
-}
-
 variable "project" {
   type = string
   default = "ekke-cloud"
@@ -15,36 +10,25 @@ variable "region" {
 
 variable "vm_name" {
   type = string
-  default = "oa4r7u-vm"
 }
 
-variable "disk_name" {
-  type = string
-  default = "oa4r7u-disk"
-}
-
-variable "account_id" {
-  type = string
-  default = "oa4r7u"
-}
-
-variable "display_name" {
-  type = string
-}
-
-variable "machine_type" {
+variable "vm_type" {
   type = string
   default = "f1-micro"
 }
 
-variable "zone" {
+variable "vm_zone" {
   type = string
   default = "europe-central2-a"
 }
 
-variable disk_image {
-    type = string
-    default = "debian-11-bullseye-v20220719"
+variable "service_account_id" {
+  type = string
+}
+
+variable "disk_name" {
+  type = string
+  default = "oa4r7u"
 }
 
 variable "disk_type" {
@@ -52,12 +36,17 @@ variable "disk_type" {
   default = "pd-standard"
 }
 
-variable "disk_size" {
+variable "disk_image" {
   type = string
-  default = "10"
+  default = "debian-11-bullseye-v20220719"
 }
 
-variable "disk_block_size_bytes" {
-  type = string
-  default = "4096"
+variable "disk_size" {
+  type = number
+  default = 10
+}
+
+variable "disk_block_size" {
+  type = number
+  default = 4096
 }

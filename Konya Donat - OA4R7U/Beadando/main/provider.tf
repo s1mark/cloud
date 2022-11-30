@@ -1,6 +1,6 @@
 provider "google" {
-  project = var.project
-  region = var.region
+   project="ekke-cloud"
+   region="europe-central2"
 }
 
 terraform {
