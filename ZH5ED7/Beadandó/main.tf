@@ -10,6 +10,10 @@ resource "google_compute_instance" "default" {
     name         = var.vm-name
     zone         = var.zone
 
+    service_account {
+      email = google_service_account.service_account.email
+      scopes = ["monitoring"]
+    }
     
     boot_disk {
         initialize_params {
