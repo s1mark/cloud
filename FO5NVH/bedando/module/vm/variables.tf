@@ -1,6 +1,5 @@
 variable "neptun_kod" {
   type = string
-  default = "fo5nvh"
 }
 
 //vm
