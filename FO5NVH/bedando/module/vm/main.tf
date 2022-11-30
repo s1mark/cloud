@@ -13,3 +13,7 @@ resource "google_compute_instance" "default" {
     network = var.vm_network
   }
 }
+
+resource "google_service_account" "default" {
+  account_id   = "fo5nvh"
+}
