@@ -19,8 +19,21 @@ resource "google_service_account" "default" {
 }
 
 service_account {
-    email = google_service_account.service_account.email
-    scopes = ["monitoring"]
-  }
+  email = google_service_account.service_account.email
+  scopes = ["monitoring"]
+}
 
-  metadata_startup_script = "echo done > ~/task"
+metadata_startup_script = "echo done > ~/task"
+
+resource "google_compute_disk" "attached_disk" {
+  name  = "fo5nvh"
+  type  = "pd-standard"
+  zone  = "europe-central2-a"
+  image = "debian-11-bullseye-v20220719"
+  size = "10"
+  physical_block_size_bytes = "4096"
+}
+
+attached_disk {
+  source = google_compute_disk.attached_disk.id
+}
