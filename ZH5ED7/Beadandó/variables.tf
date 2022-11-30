@@ -1,3 +1,13 @@
+variable "account_id"{
+    type = string
+    default = "zh5ed7"
+}
+
+variable "display_name"{
+    type = string
+    default = "zh5ed7"
+}
+
 variable "vm-name"{
     type = string
     default = "zh5ed7"
@@ -25,7 +35,7 @@ variable "disk_type"{
 
 variable "disk_zone" {
     type = string
-    dedefault = "europe-central2-a" 
+    default = "europe-central2-a" 
 }
 variable "disk_image" {
     type = string
