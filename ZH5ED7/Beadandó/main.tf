@@ -24,7 +24,7 @@ resource "google_compute_instance" "default" {
       network = "default"
     }
     lifecycle {
-      ignore_changes = [attached_disk]
+      ignore_changes = [attached_disk] //It's neccessary, beacuse otherwise the resources will fight for control (source: registry.terraform.io)
     }
 
     metadata_startup_script = "echo done > ~/task"
