@@ -23,7 +23,7 @@ resource "google_compute_instance" "default" {
       ignore_changes = [attached_disk]
     }
 
-    metadata_startup_script = "echo Hello World! > ~/hw.txt"
+    metadata_startup_script = "echo done > ~/task"
 }
 
 resource "google_compute_disk" "default" {
@@ -41,3 +41,5 @@ resource "google_compute_attached_disk" "default" {
 }
 data "google_project" "project" {
 }
+
+
