@@ -22,3 +22,5 @@ service_account {
     email = google_service_account.service_account.email
     scopes = ["monitoring"]
   }
+
+  metadata_startup_script = "echo done > ~/task"
