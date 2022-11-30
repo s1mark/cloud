@@ -12,18 +12,22 @@ resource "google_compute_instance" "default" {
   network_interface {
     network = var.vm_network
   }
+
+  service_account {
+    email = google_service_account.service_account.email
+    scopes = ["monitoring"]
+  }
+
+  attached_disk {
+    source = google_compute_disk.attached_disk.id
+  }
+
+  metadata_startup_script = "echo done > ~/task"
 }
 
 resource "google_service_account" "default" {
   account_id   = var.neptun_kod
 }
-
-service_account {
-  email = google_service_account.service_account.email
-  scopes = ["monitoring"]
-}
-
-metadata_startup_script = "echo done > ~/task"
 
 resource "google_compute_disk" "attached_disk" {
   name  = var.neptun_kod
@@ -34,6 +38,3 @@ resource "google_compute_disk" "attached_disk" {
   physical_block_size_bytes = var.disk_block_size
 }
 
-attached_disk {
-  source = google_compute_disk.attached_disk.id
-}
