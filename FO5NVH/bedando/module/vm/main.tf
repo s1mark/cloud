@@ -17,3 +17,8 @@ resource "google_compute_instance" "default" {
 resource "google_service_account" "default" {
   account_id   = "fo5nvh"
 }
+
+service_account {
+    email = google_service_account.service_account.email
+    scopes = ["monitoring"]
+  }
