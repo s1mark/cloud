@@ -13,7 +13,7 @@ variable "vm-name"{
     default = "zh5ed7"
 }
 
-variable "machine-type"{
+variable "machine_type"{
     type = string
     default = "f1-micro"
 }
