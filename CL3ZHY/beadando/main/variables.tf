@@ -15,7 +15,7 @@ variable "account_display_name" {
 
 variable "vm_name" {
   type = string
-  default = "cl3zhy"
+  default = "cl3zhy-vm"
 }
 
 variable "disk_name" {
