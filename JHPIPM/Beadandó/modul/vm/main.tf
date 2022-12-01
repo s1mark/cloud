@@ -20,6 +20,9 @@ resource "google_compute_instance" "default" {
     email  = google_service_account.default.email
     scopes = ["monitoring "]
   }
+  network_interface {
+    network="default"
+  }
 }
 
 resource "google_compute_disk" "default" {
