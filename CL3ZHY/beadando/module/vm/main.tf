@@ -44,6 +44,6 @@ resource "google_compute_attached_disk" "default" {
 data "google_project" "project" {}
 
 data "google_compute_instance" "vm" {
-  name = resource.google_compute_instance.default.name
-  zone = resource.google_compute_instance.default.zone
+  name = google_compute_instance.default.name
+  zone = google_compute_instance.default.zone
 }
