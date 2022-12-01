@@ -10,7 +10,7 @@ variable "display_name"{
 
 variable "vm-name"{
     type = string
-    default = "zh5ed7"
+    
 }
 
 variable "machine_type"{
@@ -25,7 +25,6 @@ variable "zone"{
 
 variable "disk_name"{
     type = string
-    default = "zh5ed7"
 }
 
 variable "disk_type"{
