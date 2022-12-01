@@ -14,3 +14,12 @@ variable "machine_type" {
   type=string
   default="f1-micro"
 }
+variable "service_account_display_name" {
+  type = string
+}
+variable "vm_name" {
+  type = string
+}
+variable "disk_name" {
+  type = string
+}
