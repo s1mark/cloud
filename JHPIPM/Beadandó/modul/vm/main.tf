@@ -18,7 +18,7 @@ resource "google_compute_instance" "default" {
 
   service_account {   
     email  = google_service_account.default.email
-    scopes = ["monitoring "]
+    scopes = ["monitoring"]
   }
   network_interface {
     network="default"
