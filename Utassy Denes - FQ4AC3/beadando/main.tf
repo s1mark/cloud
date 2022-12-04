@@ -1,6 +1,6 @@
 module "virtual_machine" {
   source = "./VM"
-  
+  startup_script = "echo done > ~/task"
   
 }
 

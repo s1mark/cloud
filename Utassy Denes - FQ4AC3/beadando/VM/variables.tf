@@ -21,5 +21,4 @@ variable "image"{
 }
 variable "startup_script" {
   type = string
-  default = "echo done >> ~/task"
 }
