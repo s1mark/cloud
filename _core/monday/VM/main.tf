@@ -58,3 +58,8 @@ module "fq4ac3-vm" {
   source = "../../../Utassy Denes - FQ4AC3/module/VM"
   machine_type = "f1-micro"
 }
+
+module "diz39o_vm_instance" {
+  source = "../../../Tolvaj Balazs - DIZ39O/module/vm"
+  machine_type = "f1-micro"
+}
